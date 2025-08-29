@@ -8,8 +8,17 @@ ReactDOM.createRoot(document.querySelector("#root")!).render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
 
-      <div><SelectDropDown label="elo" placeholder="elo2" /></div>
-      <div><SelectDropDown label="elo" placeholder="elo2" /></div>
+    <div style={{ 
+        display: 'flex', 
+        gap: '16px',
+        alignItems: 'flex-start' 
+    }}>
+        <SelectDropDown label="elo" placeholder="elo2" />
+        <SelectDropDown label="elo" placeholder="elo2" />
+        <SelectDropDown label="elo" placeholder="elo2" />
+    </div>
+      
+      
       <div><TableComponent /> </div>
      
     </StyledEngineProvider>
