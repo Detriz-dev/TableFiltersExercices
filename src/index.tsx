@@ -7,8 +7,8 @@ ReactDOM.createRoot(document.querySelector("#root")!).render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
 
-      <div><SelectDropDown lable="elo" /></div>
-      <div><SelectDropDown lable="elo" /></div>
+      <div><SelectDropDown label="elo" placeholder="elo2" /></div>
+      <div><SelectDropDown label="elo" placeholder="elo2" /></div>
      
     </StyledEngineProvider>
   </React.StrictMode>

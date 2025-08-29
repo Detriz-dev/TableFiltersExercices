@@ -10,10 +10,10 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
 export interface SelectDropDownProps {
   label: string;
-
+  placeholder: string;
 }
 
-export const SelectDropDown: React.FC<SelectDropDownProps> = ({label}) =>  {
+export const SelectDropDown: React.FC<SelectDropDownProps> = ({label, placeholder}) =>  {
   
   
   return (
@@ -39,7 +39,7 @@ export const SelectDropDown: React.FC<SelectDropDownProps> = ({label}) =>  {
       }}
       style={{ width: 500 }}
       renderInput={(params) => (
-        <TextField {...params} label={label} placeholder="Favorites" />
+        <TextField {...params} label={label} placeholder={placeholder} />
       )}
     />
   );
