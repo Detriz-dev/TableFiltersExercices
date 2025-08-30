@@ -37,9 +37,7 @@ export const TableComponent: React.FC<TableComponentProps> = ({dataSet, columnNa
           key={index} // Using index since there's no unique identifier
           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
         >
-          <TableCell component="th" scope="row">
-            {company[columnName1]}
-          </TableCell>
+          <TableCell component="th" scope="row"> {company[columnName1]} </TableCell>
           <TableCell align="right">{company[columnName2]}</TableCell>
           <TableCell align="right">{company[columnName3]}</TableCell>
         </TableRow>

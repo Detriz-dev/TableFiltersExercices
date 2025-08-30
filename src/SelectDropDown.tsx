@@ -22,7 +22,6 @@ export interface SelectDropDownProps {
 
 export const SelectDropDown: React.FC<SelectDropDownProps> = ({label, placeholder, dataSetTable, columName}) =>  {
   
- 
   
   return (
     <Autocomplete
