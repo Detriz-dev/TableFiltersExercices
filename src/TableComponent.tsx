@@ -7,15 +7,18 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-import CompaniesData from "./CompaniesData.tsx"
+
 
 export interface TableComponentProps {
-  dataSet: []
+  dataSet: Array<{
+    provider: string;
+    region: string;
+    type: string;
+  }>;
   columnName1: string;
   columnName2: string;
   columnName3: string;
 }
-
 
 export const TableComponent: React.FC<TableComponentProps> = ({dataSet, columnName1, columnName2, columnName3}) => {
   return (

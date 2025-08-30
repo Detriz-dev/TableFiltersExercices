@@ -1,4 +1,11 @@
-const CompaniesData = [
+interface CompanyData {
+  provider: string;
+  region: string;
+  type: string;
+}
+
+
+const CompaniesData: CompanyData[] = [
     { provider: "Google", region: "Europe", type: "individual" },
     { provider: "Amazon", region: "North America", type: "group" },
     { provider: "Microsoft", region: "Asia", type: "individual" },
@@ -31,4 +38,5 @@ const CompaniesData = [
     { provider: "Microsoft", region: "South America", type: "group" }
   ];
 
-  export default CompaniesData
+  export default CompaniesData;
+  export type { CompanyData };

@@ -14,13 +14,33 @@ ReactDOM.createRoot(document.querySelector("#root")!).render(
         gap: '16px',
         alignItems: 'flex-start' 
     }}>
-        <SelectDropDown label="elo" placeholder="elo2" />
-        <SelectDropDown label="elo" placeholder="elo2" />
-        <SelectDropDown label="elo" placeholder="elo2" />
+        <SelectDropDown 
+          label="elo" 
+          placeholder="elo2" 
+          dataSetTable={CompaniesData}
+          columName="provider"
+        />
+        <SelectDropDown 
+          label="elo" 
+          placeholder="elo2"
+          dataSetTable={CompaniesData}
+          columName="region"
+          
+        />
+        <SelectDropDown 
+          label="elo" 
+          placeholder="elo2" 
+          dataSetTable={CompaniesData}
+          columName="type"
+        />
     </div>
       
       
-      <div><TableComponent dataSet={CompaniesData} columnName1="provider" columnName2="region" columnName3="type"/> </div>
+      <div><TableComponent 
+          dataSet={CompaniesData} 
+          columnName1="provider" 
+          columnName2="region" 
+          columnName3="type"/> </div>
      
     </StyledEngineProvider>
   </React.StrictMode>
