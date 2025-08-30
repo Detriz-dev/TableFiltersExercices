@@ -22,15 +22,15 @@ export interface SelectDropDownProps {
 
 export const SelectDropDown: React.FC<SelectDropDownProps> = ({label, placeholder, dataSetTable, columName}) =>  {
   
-  const dataComp = [...new Set(dataSetTable)]
+ 
   
   return (
     <Autocomplete
       multiple
       id="checkboxes-tags-demo"
-      options={dataComp}
+      options={dataSetTable}
       disableCloseOnSelect
-      getOptionLabel={(dataComp) => dataComp[columName]}
+      getOptionLabel={(dataSetTable) => dataSetTable[columName]}
       renderOption={(props, option, { selected }) => {
         const { key, ...optionProps } = props;
         return (
@@ -41,7 +41,7 @@ export const SelectDropDown: React.FC<SelectDropDownProps> = ({label, placeholde
               style={{ marginRight: 8 }}
               checked={selected}
             />
-            {dataComp[columName]}
+            {dataSetTable[columName]}
           </li>
         );
       }}
