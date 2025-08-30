@@ -14,9 +14,9 @@ ReactDOM.createRoot(document.querySelector("#root")!).render(
         gap: '16px',
         alignItems: 'flex-start' 
     }}>
-        <SelectDropDown label="elo" placeholder="elo2" />
-        <SelectDropDown label="elo" placeholder="elo2" />
-        <SelectDropDown label="elo" placeholder="elo2" />
+        <SelectDropDown label="elo" placeholder="elo2" dataSet={CompaniesData} tableColum="provider" />
+        <SelectDropDown label="elo" placeholder="elo2" dataSet={CompaniesData} tableColum="region"/>
+        <SelectDropDown label="elo" placeholder="elo2" dataSet={CompaniesData} tableColum="type" />
     </div>
       
       

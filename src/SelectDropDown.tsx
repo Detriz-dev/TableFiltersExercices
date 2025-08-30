@@ -11,18 +11,20 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />;
 export interface SelectDropDownProps {
   label: string;
   placeholder: string;
+  tableColum: string
+  dataSet:[]
 }
 
-export const SelectDropDown: React.FC<SelectDropDownProps> = ({label, placeholder}) =>  {
+export const SelectDropDown: React.FC<SelectDropDownProps> = ({label, placeholder, dataSet, tableColum}) =>  {
   
   
   return (
     <Autocomplete
       multiple
       id="checkboxes-tags-demo"
-      options={top100Films}
+      options={dataSet}
       disableCloseOnSelect
-      getOptionLabel={(option) => option.title}
+      getOptionLabel={(dataSet) => dataSet[tableColum]}
       renderOption={(props, option, { selected }) => {
         const { key, ...optionProps } = props;
         return (
@@ -33,7 +35,7 @@ export const SelectDropDown: React.FC<SelectDropDownProps> = ({label, placeholde
               style={{ marginRight: 8 }}
               checked={selected}
             />
-            {option.title}
+            {dataSet[tableColum]}
           </li>
         );
       }}
