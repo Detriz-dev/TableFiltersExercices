@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.querySelector("#root")!).render(
     </div>
       
       
-      <div><TableComponent /> </div>
+      <div><TableComponent dataSet={CompaniesData} columnName1="provider" columnName2="region" columnName3="type"/> </div>
      
     </StyledEngineProvider>
   </React.StrictMode>

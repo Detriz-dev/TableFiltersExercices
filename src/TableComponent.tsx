@@ -10,9 +10,11 @@ import Paper from '@mui/material/Paper';
 import CompaniesData from "./CompaniesData.tsx"
 
 
-export default function TableComponent() {
+
+
+export default function TableComponent(dataSet, columnName1, columnName2, columnName3) {
   return (
-    <TableContainer component={Paper}>
+  <TableContainer component={Paper}>
   <Table sx={{ minWidth: 650 }} aria-label="companies table">
     <TableHead>
       <TableRow>
@@ -22,16 +24,16 @@ export default function TableComponent() {
       </TableRow>
     </TableHead>
     <TableBody>
-      {CompaniesData.map((company, index) => (
+      {dataSet.map((company, index) => (
         <TableRow
           key={index} // Using index since there's no unique identifier
           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
         >
           <TableCell component="th" scope="row">
-            {company.provider}
+            {company[columnName1]}
           </TableCell>
-          <TableCell align="right">{company.region}</TableCell>
-          <TableCell align="right">{company.type}</TableCell>
+          <TableCell align="right">{company[columnName2]}</TableCell>
+          <TableCell align="right">{company[columnName3]}</TableCell>
         </TableRow>
       ))}
     </TableBody>
