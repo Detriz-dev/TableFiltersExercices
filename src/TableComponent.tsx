@@ -9,10 +9,15 @@ import Paper from '@mui/material/Paper';
 
 import CompaniesData from "./CompaniesData.tsx"
 
+export interface TableComponentProps {
+  dataSet: []
+  columnName1: string;
+  columnName2: string;
+  columnName3: string;
+}
 
 
-
-export default function TableComponent(dataSet, columnName1, columnName2, columnName3) {
+export const TableComponent: React.FC<TableComponentProps> = ({dataSet, columnName1, columnName2, columnName3}) => {
   return (
   <TableContainer component={Paper}>
   <Table sx={{ minWidth: 650 }} aria-label="companies table">
