@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom/client';
 import { StyledEngineProvider } from '@mui/material/styles';
 import {SelectDropDown} from './SelectDropDown';
 import TableComponent from  './TableComponent'
+import CompaniesData from './CompaniesData';
 
 ReactDOM.createRoot(document.querySelector("#root")!).render(
   <React.StrictMode>
